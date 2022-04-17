@@ -35,7 +35,7 @@
           <h2 class="text-gray-800 text-lg font-semibold mb-2">
             <a href="{{ route('detail', ['id'=>$restaurants[$i]['id']]) }}" class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">{{ $restaurants[$i]["name"]}}</a>
           </h2>
-          <p class="text-gray-500 mb-8">住所：{{ $restaurants[$i]["genre"]["name"]}}.</p>
+          <p class="text-gray-500 mb-8">ジャンル：{{ $restaurants[$i]["genre"]["name"]}}</p>
           <p class="text-gray-500 mb-8">住所：{{ $restaurants[$i]["address"]}}.</p>
         </div>
       </div>

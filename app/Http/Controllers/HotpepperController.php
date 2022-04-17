@@ -23,6 +23,7 @@ class HotpepperController extends Controller
         $latitude = $all["latitude"];
         $longitude = $all["longitude"];
         $range = $all["range"];
+        $keyword = $all["keyword"];
         // methodの設定
         $method = "GET";
         // Apiキーの呼び出し
@@ -35,7 +36,8 @@ class HotpepperController extends Controller
                 'lng' => $longitude,
                 'count' => 100,
                 'range' => $range,
-                'format' => 'json'
+                'keyword' => $keyword,
+                'format' => 'json',
             ],
         ];
         // httpリクエストを送信
@@ -71,8 +73,8 @@ class HotpepperController extends Controller
 
         $restaurants = json_decode($response->getBody(), true)['results'];
 
-        $detail_restaurants = $restaurants["shop"];
+        $detail_restaurant = $restaurants["shop"];
 
-        return view('detail', compact('detail_restaurants'));
+        return view('detail', compact('detail_restaurant'));
     }
 }
