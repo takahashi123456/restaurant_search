@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class FormController extends Controller
 {
     //
-    function index(){
+    function search(){
         return view('search', );
     }
 }

@@ -18,7 +18,7 @@ use App\Http\Controllers\FormController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('/list', 'App\Http\Controllers\HotpepperController@index');
-Route::get('/search', 'App\Http\Controllers\FormController@index');
-Route::get('/detail/{id}','App\Http\Controllers\HotpepperController@detail')->name("detail") ;
+Route::post('/list', 'App\Http\Controllers\HotpepperController@get_list');
+Route::get('/search', 'App\Http\Controllers\FormController@search');
+Route::get('/detail/{id}','App\Http\Controllers\HotpepperController@get_detail')->name("detail") ;
 

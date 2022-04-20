@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>レストラン検索</title>
+    <title>{{ $detail_restaurant[0]['name'] }}</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
 </head>
@@ -36,11 +36,13 @@
         <ul>
         <li class="w-auto px-5 py-2.5 font-medium bg-blue-50 m-2 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">平均予算 : {{ $detail_restaurant[0]['budget']['average'] }} </li>
         <li class="w-auto px-5 py-2.5 font-medium bg-blue-50 m-2 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">定休日 : {{ $detail_restaurant[0]['close'] }} 曜日</li>
-        <li class="w-auto px-5 py-2.5 font-medium bg-blue-50 m-2 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">総席数 : {{ $detail_restaurant[0]['capacity'] }} 席</li>
+        <li class="w-auto px-5 py-2.5 font-medium bg-blue-50 m-2 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">お店の特徴！ : {{ $detail_restaurant[0]['catch'] }} </li>
         <li class="w-auto px-5 py-2.5 font-medium bg-blue-50 m-2 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">最寄駅からのアクセス : <br> {{ $detail_restaurant[0]['access'] }}</li>
         </ul>
       </div>
     </div>
+    <p class="p-6 text-center text-xs">Powered by ホットペッパー Webサービス</p>
+
   </div>
 </div>
 </body>

@@ -15,7 +15,7 @@ class HotpepperController extends Controller
     // Apiキーの変数
     private $api_key;
 
-    public function index(){
+    public function get_list(){
 
         $api = new Client();
         // formから緯度経度や検索条件(rangeなど)を受け取る
@@ -50,15 +50,10 @@ class HotpepperController extends Controller
 
         // 配列の数をカウント
         $count = count($restaurants);
-
-        // return view('index', compact('restaurants'));
         return view('list', compact('restaurants','count'));
     }
     
-    public function detail($id){
-        // postからidを取得
-        // $all = Request::all("value");
-
+    public function get_detail($id){
         // Apiキーからidで検索し取得
         $api = new Client();
         $method = "GET";

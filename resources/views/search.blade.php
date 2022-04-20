@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>詳細ページ</title>
+    <title>レストラン検索ページ</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
@@ -21,12 +21,12 @@
         <div class="flex flex-col gap-4 p-4 md:p-8">
             <div>
                 <label for="latitude" class="inline-block text-gray-800 text-sm sm:text-base mb-2" >緯度</label>
-                <input name="latitude" id="latitude"  type="text" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" readonly/>
+                <input name="latitude" id="latitude"  type="text" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" required/>
         </div>
 
         <div>
             <label for="longitude" class="inline-block text-gray-800 text-sm sm:text-base mb-2" >経度</label>
-            <input name="longitude"id="longitude" type="text"  class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" readonly/>
+            <input name="longitude"id="longitude" type="text"  class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2"  required/>
         </div>
         <div>
             <label for="range" class="inline-block text-gray-800 text-sm sm:text-base mb-2">検索距離</label>
@@ -46,10 +46,12 @@
       </div>
 
       <div class="flex justify-center items-center bg-gray-100 p-4">
-        <p class="text-gray-500 text-sm text-center">位置情報を取得できませんか？<p class="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 transition duration-100">位置情報を渡すに許可をしてください</p></p>
+        <p class="text-gray-500 text-sm text-center">位置情報を取得できない時は設定から位置情報を渡すに許可をしてください</p></p>
       </div>
     </form>
   </div>
+  <p class="p-6 text-center text-xs">Powered by ホットペッパー Webサービス</p>
+
 </div>
     <script src="{{ asset('/js/geolocation.js') }}"></script>
 

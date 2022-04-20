@@ -36,12 +36,14 @@
             <a href="{{ route('detail', ['id'=>$restaurants[$i]['id']]) }}" class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">{{ $restaurants[$i]["name"]}}</a>
           </h2>
           <p class="text-gray-500 mb-8">ジャンル：{{ $restaurants[$i]["genre"]["name"]}}</p>
-          <p class="text-gray-500 mb-8">住所：{{ $restaurants[$i]["address"]}}.</p>
+          <p class="text-gray-500 mb-8">住所：{{ $restaurants[$i]["access"]}}.</p>
         </div>
       </div>
       <!-- article - end -->
       @endfor
     </div>
+    <p class="p-6 text-center text-xs">Powered by ホットペッパー Webサービス</p>
+    
   </div>
 </div>
 
