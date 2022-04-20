@@ -12,7 +12,8 @@
 
 ### 公開したアプリの URL（Store にリリースしている場合）
 http://35.78.176.35/search
-AWSを用いて公開したのですが、私の力不足により、SSL化を行うことができていないため、Geolocation APIが使うことができず、位置情報を取得することができません。そのため、localで環境構築し、検証していただけると幸いです。
+AWSを用いて公開したのですが、私の力不足により、SSL化を行うことができていないため、Geolocation APIが使うことができず、位置情報を取得することができません。
+そのため、localで環境構築し、検証していただけると幸いです。
 
 ### 該当プロジェクトのリポジトリ URL（GitHub,GitLab など Git ホスティングサービスを利用されている場合）
 https://github.com/takahashi123456/restaurant_search
@@ -43,8 +44,11 @@ Safari
 
 ### 画面一覧
 - 検索画面 ：フリーワードや現在地を指定してレストランを検索する。
+ ![検索画面](api-app/public/img/search.png)
 - 一覧画面 ：検索結果の飲食店を一覧表示する。
+ ![一覧画面](api-app/public/img/list.png)
 - 詳細画面 ：一覧表示のリストからクリックした店の詳細ページを表示する
+ ![詳細画面](api-app/public/img/detail.png)
 
 ### 使用しているAPI,SDK,ライブラリなど
 - ホットペッパーグルメサーチAPI
