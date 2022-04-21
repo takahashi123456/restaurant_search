@@ -28,6 +28,7 @@ PHP 8.1.4
 
 ## 動作対象端末・OS
 ### 動作対象OS
+Macbook M1
 Chrome
 Safari
 
